@@ -1,4 +1,4 @@
-
+# Pythagorean Triples Checker
 def pythagorean_triple_checker(x,y,z):
     if (x**2 + y**2) == z**2:
         message = f"\n{x},{y},{z} are a Pythagorean Triple\n"
@@ -14,6 +14,7 @@ def pythagorean_triple_checker(x,y,z):
     
     return message
 
+# Function to get sides from user
 def get_sides():
     side_a = int(input ("Enter side a: "))
     side_b = int(input ("Enter side b: "))
@@ -25,6 +26,8 @@ a,b,c = get_sides()
 print (pythagorean_triple_checker(a,b,c))
         
 play_again = True
+
+# Loop to allow multiple checks
 while play_again:
     
     question = input ("Play again? (y/n): ")

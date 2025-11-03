@@ -33,6 +33,7 @@ responses =[
     "Cannot predict now"
 ]
 
+#----------------------NON-GUI VERSION-------------------
 # question = input("Please enter your question: ")
 # print ("thinking...")
 # time.sleep(3)
@@ -58,7 +59,7 @@ entry_widget = ttk.Entry(root, width=30) # You can set the width in characters
 entry_widget.pack(pady=10) # Place the widget in the window
 
 
-
+# Function to get the input from the entry widget and display response
 def get_response():
     
     # Add other content to your main window below the header
@@ -80,17 +81,18 @@ def get_response():
     divider.pack(pady=5)
     response_label.update()
 
-
+# Function to clear the entry widget
 def clear_response():
     entry_widget.delete(0, tk.END)
     
-
+# Function to play again
 def play_again():
     entry_widget.delete(0, tk.END)
     for widget in root.winfo_children():
         if isinstance(widget, tk.Label) and widget != label:
             widget.destroy()
 
+# Function to quit the app
 def quit_app():
     root.destroy()            
 
